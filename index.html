@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <!-- dont forget to link CSS -->
+    <title>Show Popup After Site Loads</title>
+</head>
+
+<body>
+    <div class="content">
+        <h1>Hello World</h1>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequuntur provident repudiandae, iusto ipsum
+            sapiente enim in accusamus nesciunt obcaecati temporibus eius fuga voluptatibus adipisci iure libero!
+            Architecto nisi eligendi modi doloribus illum. Voluptatem repellat inventore, commodi illo quos magnam,
+            dicta amet quis culpa reprehenderit recusandae ea dolor vitae praesentium veniam quia esse sed dolorum quod
+            animi? Quibusdam nemo aut, atque autem facilis sequi et corrupti voluptatem minus officiis ducimus.
+            Recusandae quisquam nihil quis dolor corporis voluptatibus optio, magni distinctio accusamus provident non!
+            Neque sapiente laborum perspiciatis officiis ex deserunt maiores, non eum sint soluta, quasi eaque repellat,
+            atque adipisci voluptatem!</p> <br> <br>
+        <h2>Dummy Title</h2>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat optio odit id laboriosam architecto,
+            aspernatur ipsam quae reiciendis itaque impedit ad quisquam aperiam? Totam, alias corporis eius similique
+            dignissimos nemo explicabo veniam harum quas quod, id consequuntur quibusdam placeat ipsam. Fugit maxime
+            harum eveniet. Aut, fuga dolorum. Obcaecati ea vel nobis nulla sunt provident quasi facilis eum iusto ipsum
+            omnis voluptatum minus, quidem repellendus consectetur tempore accusantium, in rerum consequuntur veniam
+            exercitationem odio officia? Maiores, dolor quia, atque quasi sunt rerum nam enim alias rem incidunt aperiam
+            quis veritatis perspiciatis corrupti iure similique aliquid eum illum pariatur dignissimos possimus fugit
+            vero? Vitae, repellat? Voluptas accusantium, porro eum reiciendis quibusdam nihil sit rerum natus maiores at
+            iusto vero ad, a distinctio cum veritatis optio consectetur ab esse. Atque repudiandae, blanditiis
+            necessitatibus tempore, optio voluptas nisi dolorem culpa soluta dolorum distinctio tempora unde mollitia
+            ipsa quam. Fugit veritatis eligendi nesciunt, laudantium qui doloremque magnam! Consectetur rem quas illum
+            quibusdam blanditiis facilis quae quaerat voluptatem exercitationem natus aliquam iste eum, debitis pariatur
+            inventore fugiat rerum officiis maxime possimus necessitatibus ipsum velit id consequatur hic. Minus
+            dignissimos delectus odio explicabo sequi rem est numquam ea, nostrum itaque excepturi cupiditate non
+            maxime, dolores ipsam quo.</p>
+        <!-- Im just writing some dummy info just for demonstration porpuses here. You can add real content -->
+    </div>
+    <div class="popup">
+        <div class="popup-content">
+            <h1>X</h1>
+            <h2>Subscribe...</h2>
+            <p>And some dummy content that shows on this popup Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, ratione quisquam iure libero impedit aspernatur, expedita quaerat mollitia delectus, eius ad excepturi inventore aperiam perspiciatis voluptatum porro. Tenetur libero, aspernatur nobis quod autem assumenda, nostrum esse reiciendis quibusdam vitae iure harum illum similique consectetur ut ipsam, at repellendus! Nulla est debitis illo.</p>
+        </div>
+    </div>
+
+    <script>
+        const popup = document.querySelector('.popup');
+        const x = document.querySelector('.popup-content h1')
+
+        window.addEventListener('load', () => {
+            popup.classList.add('showPopup');
+            popup.childNodes[1].classList.add('showPopup');
+        })
+        x.addEventListener('click', () => {
+            popup.classList.remove('showPopup');
+            popup.childNodes[1].classList.remove('showPopup');
+        })
+    </script>
+</body>
+
+</html>
